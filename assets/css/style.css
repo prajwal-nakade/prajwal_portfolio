@@ -407,7 +407,7 @@ main {
   min-width: 100%;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .contact-info {
@@ -1826,13 +1826,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar {
     position: sticky;
     top: 60px;
+    width: 360px;
+    min-width: 360px;
+    max-width: 360px;
     max-height: max-content;
     height: 100%;
-    margin-bottom: 0;
-    padding-top: 60px;
-    z-index: 1;
-  }
-
+}
   .sidebar-info { flex-direction: column; }
 
   .avatar-box img { width: 150px; }
@@ -1879,4 +1878,102 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+.project-card {
+    background: var(--border-gradient-onyx);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--bg-gradient-jet);
+    z-index: -1;
+}
+
+.project-card h3 {
+    color: var(--orange-yellow-crayola);
+    margin-bottom: 15px;
+}
+
+.project-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.project-card ul li {
+    color: var(--light-gray);
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+
+
+/*-----------------------------------*\
+  #CONTACT CARD
+\*-----------------------------------*/
+
+.contact-description {
+  color: var(--light-gray);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.contact-card {
+  background: var(--border-gradient-onyx);
+  border-radius: 16px;
+  padding: 25px;
+  position: relative;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--jet);
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-row ion-icon {
+  font-size: 24px;
+  color: var(--orange-yellow-crayola);
+  min-width: 24px;
+}
+
+.contact-row h4 {
+  color: var(--white-2);
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.contact-row a,
+.contact-row p {
+  color: var(--light-gray);
+  font-size: 15px;
+  transition: 0.3s;
+  word-break: break-word;
+}
+
+.contact-row a:hover {
+  color: var(--orange-yellow-crayola);
 }
